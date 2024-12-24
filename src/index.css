@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 body {
   background-color: hsl(229, 24%, 87%);
   display: flex;
@@ -5,15 +6,79 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;    
+  font-family: "Ubuntu", serif;
+  font-style: normal;
 }
 
 .container { 
   background-color: hsl(0, 0%, 100%);
   width: 60vw;        
-  height: 70vh;     
-  max-width: 1200px; 
-  min-width: 300px;  
+  height: 570px;     
   border-radius: 10px;
   display: flex;
+  flex-direction: row;
+  padding: 20px;
+  justify-content: space-between;
+  padding-right: 100px;
 }
 
+.numbers{
+  margin-top: -450px;
+}
+
+.container2{
+  width: 480px;
+
+}
+h1{
+  color: hsl(213, 96%, 18%);
+  margin-bottom: -5px;
+}
+.stands{
+  color: hsl(213, 96%, 18%);
+  margin-bottom: 5px;
+  font-size: 13px;
+  font-weight: 700px;
+}
+.bodies{
+  margin-bottom: 25px;
+  letter-spacing: 1.5px;
+}
+.container21{
+  margin-bottom: 30px;
+  margin-top: 40px;
+}
+.container22{
+  margin-bottom: 120px;
+}
+.inputer{
+  width: 32.5vw;
+  height: 38px;
+  border-radius: 5px;
+  border: 1px solid hsl(229, 24%, 87%);
+}
+::placeholder{
+  font-weight: 400;
+  font-family: "Ubuntu", serif;
+  font-style: normal;
+  color: hsl(231, 11%, 63%);
+}
+.please{
+  font-weight: 400;
+  font-size: 15px;
+  color: hsl(231, 11%, 63%);
+
+}
+.button{
+  background-color: hsl(213, 96%, 18%);
+  color: white;
+  height: 45px;
+  font-family: "Ubuntu", serif;
+  font-style: normal;
+  border-radius: 5px;
+  width: 7vw;
+}
+.container23{
+  display: flex;
+  justify-content: end;
+}
