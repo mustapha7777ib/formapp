@@ -235,7 +235,6 @@ h1{
   justify-content: space-around;
   margin-bottom: 9px;
 }
-/* The switch - the box around the slider */
 .switch {
   position: relative;
   display: inline-block;
@@ -243,15 +242,11 @@ h1{
   height: 24px;
   margin-top: 13px;
 }
-
-/* Hide default HTML checkbox */
 .switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
-
-/* The slider */
 .slider {
   position: absolute;
   cursor: pointer;
@@ -289,8 +284,6 @@ input:checked + .slider:before {
   -ms-transform: translateX(26px);
   transform: translateX(26px);
 }
-
-/* Rounded sliders */
 .slider.round {
   border-radius: 34px;
 }
@@ -341,7 +334,7 @@ input:checked + .slider:before {
   display: initial;
   width: 480px;
 }
-.bodiesss{
+.bodiesss {
   display: flex;
   flex-direction: row;
   border: 1px solid hsl(229, 24%, 87%);
@@ -355,24 +348,129 @@ input:checked + .slider:before {
   margin-right: 20px;
   font-size: 10px;
   margin-bottom: 20px;
-
 }
-.checkbox{
+
+.checkbox {
   margin-right: 20px;
 }
-.bodiesss1{
+
+.bodiesss1 {
   margin-top: -20px;
   margin-right: 60px;
 }
-.d{
+
+.d {
   color: hsl(213, 96%, 18%);
-  font-size: 12px;
-  font-weight: 500;
+  font-size: 13px;
+  font-weight: 600;
 }
-.e{
+
+.e {
   margin-top: -10px;
   color: hsl(231, 11%, 63%);
 }
-.price{
-  justify-self: flex-end;
+
+.price {
+  margin-left: auto; 
+  color: hsl(243, 100%, 62%);
+  font-size: 12px;
+  font-weight: 500;
+  padding-right: 20px;
+  margin-top: -10px;
+}
+.hide{
+  display: none;
+}
+.nohide{
+  display: initial;
+  margin-bottom: -10px;
+  font-size: 12px;
+  color: hsl(231, 11%, 63%);
+  margin-bottom:-5px;
+}
+.hide1{
+  display: none;
+}
+.nohide1{
+
+}
+.bodiesss2 {
+  display: flex;
+  flex-direction: row;
+  border: 2px solid hsl(228, 100%, 84%);
+  padding-top: 30px;
+  padding-left: 20px;
+  align-items: self-start;
+  letter-spacing: 1.5px;
+  border-radius: 10px;
+  height: 45px;
+  width: 32.0vw;
+  margin-right: 20px;
+  font-size: 10px;
+  margin-bottom: 20px;
+  background-color: hsl(217, 100%, 97%);
+}
+.button3{
+  background-color: hsl(213, 96%, 18%);
+  color: white;
+  height: 45px;
+  font-family: "Ubuntu", serif;
+  font-style: normal;
+  border-radius: 5px;
+  width: 7vw;
+  border: none;
+  margin-top: 85px;
+}
+.button4{
+  background-color: white;
+  color: hsl(229, 24%, 87%);
+  border: none;
+  height: 45px;
+  font-family: "Ubuntu", serif;
+  font-style: normal;
+  border-radius: 5px;
+  width: 7vw;
+  margin-top: 85px;
+}
+.button5{
+  background-color: hsl(213, 96%, 18%);
+  color: white;
+  height: 45px;
+  font-family: "Ubuntu", serif;
+  font-style: normal;
+  border-radius: 5px;
+  width: 7vw;
+  border: none;
+  margin-top: 77px;
+}
+.button6{
+  background-color: white;
+  color: hsl(229, 24%, 87%);
+  border: none;
+  height: 45px;
+  font-family: "Ubuntu", serif;
+  font-style: normal;
+  border-radius: 5px;
+  width: 7vw;
+  margin-top: 77px;
+}
+.button3:hover{
+  background-color: hsl(213, 86%, 24%);
+}
+.button4:hover{
+  background-color: hsl(229, 24%, 87%);
+  color: white;
+}
+.button5:hover{
+  background-color: hsl(213, 86%, 24%);
+}
+.button6:hover{
+  background-color: hsl(229, 24%, 87%);
+  color: white;
+}
+.hided1{
+  display: none;
+}
+.nohided1{
+  display: initial;
 }

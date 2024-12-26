@@ -17,66 +17,80 @@ function Info(){
     const [color2, setcolor2] = useState(true);
     const [color3, setcolor3] = useState(true);
     const [third, setthird] = useState(false);
+    const [fourth, setfourth] = useState(false);
+    const [tick1, settick1] = useState(false);
+    const [tick2, settick2] = useState(false);
+    const [tick3, settick3] = useState(false);
 
-    var n = 2;
     const handleclick = () => {
         if(name.trim() === ''){
-            console.log("Input is empty");
             setnamebutton(true);
         }
         if(name.trim() != ''){
-            console.log("Input is not empty");
             setnamebutton(false);
         }
         if(email.trim() === ''){
-            console.log("Input is empty");
             setemailbutton(true);
         }
         if(email.trim() != ''){
-            console.log("Input is not empty");
             setemailbutton(false);
         }
         if(phone.trim() === ''){
-            console.log("Input is empty");
             setphonebutton(true);
         }
         if(phone.trim() != ''){
-            console.log("Input is not empty");
             setphonebutton(false);
         }
         if (name.trim() != '' && email.trim() != '' && phone.trim() != ''){
             setallbutton(true);
         }
         }
-
-        const handleclick2 = () => {
-            settoggle((prevToggle) => !prevToggle); // Toggle the state directly
-        };
         const handleclick3 = () => {
             setallbutton(false);
         };
         const handleclick4 = () => {
-            setcolor1(false);
+            setcolor1(true);
             setcolor2(true);
             setcolor3(true);
         };
         const handleclick5 = () => {
             setcolor2(false);
-            setcolor1(true);
+            setcolor1(false);
             setcolor3(true);
         };
         const handleclick6 = () => {
             setcolor3(false);
-            setcolor1(true);
+            setcolor1(false);
             setcolor2(true);
         };
         const handleclick7 = () => {
             setthird(true);
             setallbutton(true);
         };
+        const handleclick8 = () => {
+            setthird(false);
+        };
+        const handleclick9 = () => {
+            settick1((prevTick) => !prevTick);
+        };
+        
+        const handleclick10 = () => {
+            settick2((prevTick) => !prevTick);
+        };
+        
+        const handleclick11 = () => {
+            settick3((prevTick) => !prevTick);
+        };
+        const handleclick12 = () => {
+            setfourth(true);
+        };
+        const handleclick13 = () => {
+            setfourth(false);
+        };
+        
     return(
         <>
-        <Side button = {allbutton} third={third}/>
+        <Side button = {allbutton} third={third} fourth={fourth}/>
         <div className={`${allbutton ? 'container2second' : 'container2'}`}>
             <div className='container21'>
                 <h1>Personal info</h1>
@@ -124,22 +138,25 @@ function Info(){
                 <p className='please' >You have the option of monthly or yearly billing.</p>
             </div>
             <div className='container22second'>
-                <div onClick={() => handleclick4()} className={`${color1 ? 'bodiess' : 'bodiess2'}`}>
+                <div onClick={() => handleclick4()} className={`${color1 ? 'bodiess2' : 'bodiess'}`}>
                     <img className='icon' src={icon1}></img>
                     <p className='value a'>Arcade</p>
-                    <p className='value b'>$9/mo</p>
+                    <p className={`${toggle ? 'nohide' : 'hide'}`}>$9/mo</p>
+                    <p className={`${toggle ? 'hide' : 'nohide'}`}>$90/yr</p>
                     <p className={`${toggle ? 'tobehidden' : 'tobehidden2'}`}>2 months free</p>
                 </div>
                 <div onClick={() => handleclick5()} className={`${color2 ? 'bodiess' : 'bodiess2'}`}>
                     <img  className='icon' src={icon2}></img>
-                    <p className='value a'> Advanced</p>
-                    <p className='value b'>$12/mo</p>
+                    <p className='value a'>Advanced</p>
+                    <p className={`${toggle ? 'nohide' : 'hide'}`}>$12/mo</p>
+                    <p className={`${toggle ? 'hide' : 'nohide'}`}>$120/yr</p>
                     <p className={`${toggle ? 'tobehidden' : 'tobehidden2'}`}>2 months free</p>
                 </div>
                 <div onClick={() => handleclick6()} className={`${color3 ? 'bodiess c' : 'bodiess2 c'}`}>
                     <img className='icon' src={icon3}></img>
                     <p className='value a'>Pro</p>
-                    <p className='value b'>$15/mo</p>
+                    <p className={`${toggle ? 'nohide' : 'hide'}`}>$15/mo</p>
+                    <p className={`${toggle ? 'hide' : 'nohide'}`}>$150/yr</p>
                     <p className={`${toggle ? 'tobehidden' : 'tobehidden2'}`}>2 months free</p>
                 </div>
             </div>
@@ -148,8 +165,8 @@ function Info(){
                 <label className="switch">
                     <input
                         type="checkbox"
-                        checked={!toggle} // Reflect the toggle state
-                        onChange={() => settoggle(!toggle)} // Toggle the state on click
+                        checked={!toggle}
+                        onChange={() => settoggle(!toggle)}
                     />
                     <span className="slider round"></span>
                 </label>
@@ -157,56 +174,103 @@ function Info(){
             </div>
 
             <div className='container23second'>
-                <button onClick={() => handleclick3()} className='button2'>Go back</button>
-                <button onClick={() => handleclick7()} className='button'>Next Step</button>
+                <button onClick={() => handleclick3()} className='button4'>Go back</button>
+                <button onClick={() => handleclick7()} className='button3'>Next Step</button>
             </div>
         </div>
-        <div className={`${allbutton && third ? 'container4second' : 'container4'}`}>
+        <div className={`${allbutton && third !== fourth? 'container4second' : 'container4'}`}>
             <div className='container21'>
                     <h1>Pick add-ons</h1>
                     <p className='please' >Add-ons help enhance your gaming experience.</p>
             </div>
             <div className='container22third'>
-                <div className='bodiesss'>
+                <div onClick={handleclick9} className={`${tick1 ? 'bodiesss2' : 'bodiesss'}`}>
                     <div>
-                        <input className='checkbox' type='checkbox'></input>
+                        <input
+                            checked={tick1}
+                            className='checkbox'
+                            type='checkbox'
+                            readOnly
+                        />
                     </div>
                     <div className='bodiesss1'>
                         <p className='d'>Online service</p>
                         <p className='e'>Access to multiplayer games</p>
                     </div>
-                    <div>
-                        <p className='price'>+$1/mo</p>
-                    </div>      
+                    <div className='price'>
+                        <p className={`${toggle ? 'nohide1' : 'hide1'}`}>+$1/mo</p>
+                        <p className={`${toggle ? 'hide1' : 'nohide1'}`}>+$10/yr</p>
+                    </div>
                 </div>
-                <div className='bodiesss'>
+
+                <div onClick={handleclick10} className={`${tick2 ? 'bodiesss2' : 'bodiesss'}`}>
                     <div>
-                        <input className='checkbox' type='checkbox'></input>
+                        <input
+                            checked={tick2}
+                            className='checkbox'
+                            type='checkbox'
+                            readOnly
+                        />
                     </div>
                     <div className='bodiesss1'>
                         <p className='d'>Larger Storage</p>
                         <p className='e'>Extra 1TB of cloud save</p>
                     </div>
-                    <div>
-                        <p className='price'>+$2/mo</p>
-                    </div>    
+                    <div className='price'>
+                        <p className={`${toggle ? 'nohide1' : 'hide1'}`}>+$2/mo</p>
+                        <p className={`${toggle ? 'hide1' : 'nohide1'}`}>+$20/yr</p>
+                    </div>
                 </div>
-                <div className='bodiesss'>
+
+                <div onClick={handleclick11} className={`${tick3 ? 'bodiesss2' : 'bodiesss'}`}>
                     <div>
-                        <input  className='checkbox'type='checkbox'></input>
+                        <input
+                            checked={tick3}
+                            className='checkbox'
+                            type='checkbox'
+                            readOnly
+                        />
                     </div>
                     <div className='bodiesss1'>
                         <p className='d'>Customizable Profile</p>
                         <p className='e'>Custom theme on your profile</p>
                     </div>
                     <div className='price'>
-                        <p>+$2/mo</p>
-                    </div>   
+                        <p className={`${toggle ? 'nohide1' : 'hide1'}`}>+$2/mo</p>
+                        <p className={`${toggle ? 'hide1' : 'nohide1'}`}>+$20/yr</p>
+                    </div>
                 </div>
             </div>
             <div className='container23second'>
-                <button onClick={() => handleclick3()} className='button2'>Go back</button>
-                <button onClick={() => handleclick7()} className='button'>Next Step</button>
+                <button onClick={() => handleclick8()} className='button6'>Go back</button>
+                <button onClick={() => handleclick12()} className='button5'>Next Step</button>
+            </div>
+
+        </div>
+        <div className={`${allbutton && third && fourth? 'container4second' : 'container4'}`}>
+            <div className='container21'>
+                <h1>Finishing up</h1>
+                <p className='please'>Double-check everything looks OK before confirming.</p>
+            </div>
+            <div>
+                <div>
+                    <p className={`${color1 ? 'nohided1' : 'hided1'}`}>Arcade</p>
+                    <p className={`${color2 ? 'hided1' : 'nohided1'}`}>Advanced</p>
+                    <p className={`${color3 ? 'hided1' : 'nohided1'}`}>Pro</p>
+                    <p className={`${toggle ? 'nohided1' : 'hided1'}`}> (Monthly)</p>
+                    <p className={`${toggle ? 'hided1' : 'nohided1'}`}> (Yearly)</p>
+                </div>
+                <div>
+                    
+                </div>
+                <div>
+
+                </div>
+            </div>
+
+            <div className='container23second'>
+                <button onClick={() => handleclick13()} className='button4'>Go back</button>
+                <button onClick={() => handleclick14()} className='button3'>Next Step</button>
             </div>
         </div>
         </>
