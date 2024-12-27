@@ -52,6 +52,7 @@ function Info(){
             setcolor1(true);
             setcolor2(true);
             setcolor3(true);
+            console.log(toggle);
         };
         const handleclick5 = () => {
             setcolor2(false);
@@ -86,6 +87,38 @@ function Info(){
         };
         const handleclick13 = () => {
             setfourth(false);
+        };
+        const getBasePlanPrice = () => {
+            if (toggle) {
+                if (color1) return 9;
+                if (!color2) return 12;
+                if (!color3) return 15;
+            } else { // Yearly billing
+                if (color1) return 90;
+                if (!color2) return 120;
+                if (!color3) return 150;
+            }
+            return 0;
+        };
+    
+        const getAddOnsTotal = () => {
+            let total = 0;
+            if (toggle) { // Monthly billing
+                if (tick1) total += 1;
+                if (tick2) total += 2;
+                if (tick3) total += 2;
+            } else { // Yearly billing
+                if (tick1) total += 10;
+                if (tick2) total += 20;
+                if (tick3) total += 20;
+            }
+            return total;
+        };
+    
+        const getTotal = () => {
+            const basePlan = getBasePlanPrice();
+            const addOns = getAddOnsTotal();
+            return basePlan + addOns;
         };
         
     return(
@@ -252,25 +285,58 @@ function Info(){
                 <h1>Finishing up</h1>
                 <p className='please'>Double-check everything looks OK before confirming.</p>
             </div>
-            <div>
-                <div>
-                    <p className={`${color1 ? 'nohided1' : 'hided1'}`}>Arcade</p>
-                    <p className={`${color2 ? 'hided1' : 'nohided1'}`}>Advanced</p>
-                    <p className={`${color3 ? 'hided1' : 'nohided1'}`}>Pro</p>
-                    <p className={`${toggle ? 'nohided1' : 'hided1'}`}> (Monthly)</p>
-                    <p className={`${toggle ? 'hided1' : 'nohided1'}`}> (Yearly)</p>
+            <div className='containerr'>
+                <div className='containerr1'>
+                    <div>
+                        <p className={`${color1 ? 'nohided1' : 'hided1'}`}>Arcade</p>
+                        <p className={`${color2 ? 'hided1' : 'nohided1'}`}>Advanced</p>
+                        <p className={`${color3 ? 'hided1' : 'nohided1'}`}>Pro</p>
+                        <p className={`${toggle ? 'nohided1' : 'hided1'}`}> (Monthly)</p>
+                        <p className={`${toggle ? 'hided1' : 'nohided1'}`}> (Yearly)</p>
+                    </div>
+                    <div>
+                        <p className={`${toggle && color1 ? 'nohided1' : 'hided1'}`}> $9/mo</p>
+                        <p className={`${!toggle && color1 ? 'nohided1' : 'hided1'}`}> $90/yr</p>
+                        <p className={`${toggle && !color2 ? 'nohided1' : 'hided1'}`}> $12/mo</p>
+                        <p className={`${!toggle && !color2 ? 'nohided1' : 'hided1'}`}> $120/yr</p>
+                        <p className={`${toggle && !color3 ? 'nohided1' : 'hided1'}`}> $15/mo</p>
+                        <p className={`${!toggle && !color3 ? 'nohided1' : 'hided1'}`}> $150/yr</p>
+                    </div>
                 </div>
                 <div>
-                    
+                    <hr />
                 </div>
-                <div>
+                <hr />
+                <div className='cont'>
+                    <div className='cont1'>
+                        
+                        <p className={`${tick1 ? 'bodiesss3' : 'bodiesss4'}`}>Online service</p>
+                        <p className={`${tick2 ? 'bodiesss3' : 'bodiesss4'}`}>Larger Storage</p>
+                        <p className={`${tick3 ? 'bodiesss3' : 'bodiesss4'}`}>Customizable Profile</p>
 
+                    </div>
+                    <div className='cont2'>
+                        <p className={`${tick1 && toggle ? 'bodiesss3 q' : 'bodiesss4'}`}>$1/mo</p>
+                        <p className={`${tick1 && !toggle ? 'bodiesss3 q' : 'bodiesss4'}`}>$10/yr</p>
+                        <p className={`${tick2 && toggle ? 'bodiesss3 q' : 'bodiesss4'}`}>$2/mo</p>
+                        <p className={`${tick2 && !toggle ? 'bodiesss3 q' : 'bodiesss4'}`}>$20/yr</p>
+                        <p className={`${tick3 && toggle ? 'bodiesss3 q' : 'bodiesss4'}`}>$2/mo</p>
+                        <p className={`${tick3 && !toggle ? 'bodiesss3 q' : 'bodiesss4'}`}>$20/yr</p>
+                    </div>
+                </div>
+            </div >
+            <div className='containerr2'>
+                <div>
+                    <p className={`${toggle ? 'nohided1' : 'hided1'}`}>Total (per month)</p>
+                    <p className={`${toggle ? 'hided1' : 'nohided1'}`}>Total (per year)</p>
+                </div>
+                <div className='total-amount'>
+                    <p>${getTotal()}/{toggle ? 'mo' : 'yr'}</p>
                 </div>
             </div>
-
-            <div className='container23second'>
-                <button onClick={() => handleclick13()} className='button4'>Go back</button>
-                <button onClick={() => handleclick14()} className='button3'>Next Step</button>
+            <div className='container34'>
+                <button onClick={() => handleclick13()} className='button8'>Go back</button>
+                <button onClick={() => handleclick14()} className='button7'>Confirm</button>
             </div>
         </div>
         </>

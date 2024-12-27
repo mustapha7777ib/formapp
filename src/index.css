@@ -81,6 +81,7 @@ h1{
 }
 .button:hover{
   background-color: hsl(213, 86%, 24%);
+  cursor:pointer;
 }
 .container23{
   display: flex;
@@ -391,9 +392,6 @@ input:checked + .slider:before {
 .hide1{
   display: none;
 }
-.nohide1{
-
-}
 .bodiesss2 {
   display: flex;
   flex-direction: row;
@@ -454,23 +452,142 @@ input:checked + .slider:before {
   width: 7vw;
   margin-top: 77px;
 }
+.button7{
+  background-color: hsl(243, 100%, 62%);
+  color: white;
+  height: 45px;
+  font-family: "Ubuntu", serif;
+  font-style: normal;
+  border-radius: 5px;
+  width: 7vw;
+  border: none;
+
+}
+.button8{
+  background-color: white;
+  color: hsl(229, 24%, 87%);
+  border: none;
+  height: 45px;
+  font-family: "Ubuntu", serif;
+  font-style: normal;
+  border-radius: 5px;
+  width: 7vw;
+}
 .button3:hover{
   background-color: hsl(213, 86%, 24%);
+  cursor:pointer;
 }
 .button4:hover{
   background-color: hsl(229, 24%, 87%);
   color: white;
+  cursor:pointer;
 }
 .button5:hover{
   background-color: hsl(213, 86%, 24%);
+  cursor:pointer;
 }
 .button6:hover{
   background-color: hsl(229, 24%, 87%);
   color: white;
+  cursor:pointer;
+}
+.button7:hover{
+  opacity: 0.6;
+  cursor:pointer;
+}
+.button8:hover{
+  background-color: hsl(229, 24%, 87%);
+  color: white;
+  cursor:pointer;
 }
 .hided1{
   display: none;
 }
 .nohided1{
   display: initial;
+  color: hsl(213, 96%, 18%)
+  
+}
+.containerr{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 20px;
+  border-radius: 10px;
+  color: hsl(231, 11%, 63%);
+  font-size: 13px;
+  height: 160px;
+  background-color: hsl(217, 100%, 97%);
+}
+hr{
+  color: blue;
+  margin-top: 20px;
+}
+
+.containerr1{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 13px;
+}
+.containerr2{
+  font-size: 13px;
+  padding: 20px;
+  padding-top: 27.5px;
+  padding-bottom: 27.5px;
+  color: hsl(231, 11%, 63%);
+  display: flex;
+}
+.total-amount{
+  margin-left: auto;
+  padding-top: -270px;
+  margin-top: -20px;
+}
+.total-amount p{
+  color: hsl(243, 100%, 62%);
+  font-size: 20px;
+  font-weight: 600;
+}
+.containerr2 *{
+  font-size: 13px;
+  color: hsl(231, 11%, 63%);
+}
+.bodiesss3{
+  display: initial;
+}
+.q{
+  color: hsl(213, 96%, 18%);
+}
+.bodiesss4 {
+  display: none;
+}
+.container34{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: self-end;
+  margin-left: -20px;
+  margin-top: 70px;
+  position: relative;
+}
+.cont1{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: -30px;
+}
+.cont2{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-top: -30px;
+  margin-left: auto; 
+  
+}
+.cont{
+  display: flex;
+  flex-direction: row;
+}
+.container22third{
+  height: 291px;
 }
