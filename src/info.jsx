@@ -4,6 +4,7 @@ import Side from "./side.jsx"
 import icon1 from "./images/icon-arcade.svg"
 import icon2 from "./images/icon-advanced.svg"
 import icon3 from "./images/icon-pro.svg"
+import check from "./images/icon-thank-you.svg"
 function Info(){
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -18,6 +19,7 @@ function Info(){
     const [color3, setcolor3] = useState(true);
     const [third, setthird] = useState(false);
     const [fourth, setfourth] = useState(false);
+    const [fifth, setfifth] = useState(false);
     const [tick1, settick1] = useState(false);
     const [tick2, settick2] = useState(false);
     const [tick3, settick3] = useState(false);
@@ -87,6 +89,9 @@ function Info(){
         };
         const handleclick13 = () => {
             setfourth(false);
+        };
+        const handleclick14 = () => {
+            setfifth(true);
         };
         const getBasePlanPrice = () => {
             if (toggle) {
@@ -173,24 +178,24 @@ function Info(){
             <div className='container22second'>
                 <div onClick={() => handleclick4()} className={`${color1 ? 'bodiess2' : 'bodiess'}`}>
                     <img className='icon' src={icon1}></img>
-                    <p className='value a'>Arcade</p>
+                    <p className='a'>Arcade</p>
                     <p className={`${toggle ? 'nohide' : 'hide'}`}>$9/mo</p>
                     <p className={`${toggle ? 'hide' : 'nohide'}`}>$90/yr</p>
                     <p className={`${toggle ? 'tobehidden' : 'tobehidden2'}`}>2 months free</p>
                 </div>
                 <div onClick={() => handleclick5()} className={`${color2 ? 'bodiess' : 'bodiess2'}`}>
-                    <img  className='icon' src={icon2}></img>
-                    <p className='value a'>Advanced</p>
+                    <img className='icon' src={icon2}></img>
+                    <p className='a'>Advanced</p>
                     <p className={`${toggle ? 'nohide' : 'hide'}`}>$12/mo</p>
                     <p className={`${toggle ? 'hide' : 'nohide'}`}>$120/yr</p>
                     <p className={`${toggle ? 'tobehidden' : 'tobehidden2'}`}>2 months free</p>
                 </div>
                 <div onClick={() => handleclick6()} className={`${color3 ? 'bodiess c' : 'bodiess2 c'}`}>
                     <img className='icon' src={icon3}></img>
-                    <p className='value a'>Pro</p>
+                    <p className='a'>Pro</p>
                     <p className={`${toggle ? 'nohide' : 'hide'}`}>$15/mo</p>
                     <p className={`${toggle ? 'hide' : 'nohide'}`}>$150/yr</p>
-                    <p className={`${toggle ? 'tobehidden' : 'tobehidden2'}`}>2 months free</p>
+                    <p className={`${toggle ? 'tobehidden pro' : 'tobehidden2 pro'}`}>2 months free</p>
                 </div>
             </div>
             <div className="toggle">
@@ -265,7 +270,7 @@ function Info(){
                         />
                     </div>
                     <div className='bodiesss1'>
-                        <p className='d'>Customizable Profile</p>
+                        <p className='d'>Custom Profile</p>
                         <p className='e'>Custom theme on your profile</p>
                     </div>
                     <div className='price'>
@@ -280,7 +285,7 @@ function Info(){
             </div>
 
         </div>
-        <div className={`${allbutton && third && fourth? 'container4second' : 'container4'}`}>
+        <div className={`${allbutton && third && fourth !== fifth? 'container4second' : 'container4'}`}>
             <div className='container21'>
                 <h1>Finishing up</h1>
                 <p className='please'>Double-check everything looks OK before confirming.</p>
@@ -339,6 +344,15 @@ function Info(){
                 <button onClick={() => handleclick14()} className='button7'>Confirm</button>
             </div>
         </div>
+        <div className={`${allbutton && third && fourth && fifth ? 'container5second' : 'container5'}`}>
+            <img className='iconnn' src={check}></img>
+            <h1>Thank you!</h1>
+            <p>Thanks for confirming your subscription! We hope you have fun 
+                using our platform. If you ever need support, please feel free 
+                to email us at support@loremgaming.com.
+            </p>
+        </div>
+
         </>
     )
 }
