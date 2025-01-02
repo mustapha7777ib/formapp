@@ -285,7 +285,7 @@ function Info(){
             </div>
 
         </div>
-        <div className={`${allbutton && third && fourth !== fifth? 'container4second' : 'container4'}`}>
+        <div className={`${allbutton && third && fourth !== fifth? 'container6second' : 'container6'}`}>
             <div className='container21'>
                 <h1>Finishing up</h1>
                 <p className='please'>Double-check everything looks OK before confirming.</p>
@@ -335,7 +335,7 @@ function Info(){
                     <p className={`${toggle ? 'nohided1' : 'hided1'}`}>Total (per month)</p>
                     <p className={`${toggle ? 'hided1' : 'nohided1'}`}>Total (per year)</p>
                 </div>
-                <div className='total-amount'>
+                <div className='total-amount f'>
                     <p>${getTotal()}/{toggle ? 'mo' : 'yr'}</p>
                 </div>
             </div>

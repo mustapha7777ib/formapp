@@ -1,4 +1,5 @@
 import sidebar from "./images/bg-sidebar-desktop.svg";
+import sidebar2 from "./images/bg-sidebar-mobile.svg";
 import React, { useState, useEffect } from 'react';
 function Side(props){
     const [onnumber1,setonnumber1] = useState(false)
@@ -28,6 +29,13 @@ function Side(props){
     return(
         <div className='container1'>
             <img className='sidebar' src={sidebar}></img>
+            <img className='sidebar2' src={sidebar2}></img>
+            <div className="container10">
+                <p className={`${onnumber1 ? 'numbers' : 'numbers1'}`}>1</p>
+                <p className={`${onnumber1 !== onnumber2? 'numbers1' : 'numbers'}`}>2</p>
+                <p className={`${onnumber1 && onnumber2 !== onnumber3? 'numbers1' : 'numbers'}`}>3</p>
+                <p className={`${onnumber1 && onnumber2 && onnumber3? 'numbers1' : 'numbers'}`}>4</p>
+            </div>
             <div className='container11'>
                 <div className='blocks'>
                     <p className={`${onnumber1 ? 'numbers' : 'numbers1'}`}>1</p>

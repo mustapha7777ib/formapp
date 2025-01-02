@@ -9,7 +9,9 @@ body {
   font-family: "Ubuntu", serif;
   font-style: normal;
 }
-
+.sidebar2{
+  display: none;
+}
 .container { 
   background-color: hsl(0, 0%, 100%);
   width: 800px;        
@@ -23,7 +25,6 @@ body {
 }
 .container2{
   width: 480px;
-
 }
 h1{
   color: hsl(213, 96%, 18%);
@@ -92,6 +93,9 @@ h1{
   flex-direction: column;
   justify-content: space-between;
   margin-left: 30px;
+}
+.container10{
+  display: none;
 }
 .stuff{
   display: flex;
@@ -327,6 +331,13 @@ input:checked + .slider:before {
   display: none;
 }
 .container4second{
+  display: initial;
+  width: 480px;
+}
+.container6{
+  display: none;
+}
+.container6second{
   display: initial;
   width: 480px;
 }
@@ -598,20 +609,16 @@ hr{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
 }
 .container5second p{
   text-align: center;
 }
 
 @media screen and (max-width: 912px) and (min-width: 600px) {
-  body{
-    margin-left: -60px;    
-  }
   .container{
     width: 100%;
     padding: 1rem;
-    margin: 1rem;
+    margin: 0 auto;
   }
   .container2{
     width: 250px;
@@ -642,7 +649,6 @@ hr{
     padding-top: 0px;
     margin-top: -53px;
     align-items: flex-start;
-
   }
   .toggle{
     height: 50px;
@@ -652,9 +658,12 @@ hr{
   .container3second{
     width: 250px;
     padding-right: 10px;
-    
   }
   .container4second{
+    width: 250px;
+    padding-right: 10px;
+  }
+  .container6second{
     width: 250px;
     padding-right: 10px;
   }
@@ -709,7 +718,6 @@ hr{
   }
   .bodiesss{
     width: 90%;
-  
   }
   .bodiesss2{
     width: 90%;
@@ -740,46 +748,146 @@ hr{
     justify-content: center;
     align-items: center;
   }
-  .container5second h1{
-    margin-left: -40px;
-  }
-  .iconnn{
-    margin-left: -40px;
-  }
-  .container5second p{
-    margin-left: -40px;
-  }
+
 }
-@media screen and (max-width: 600px) and (min-width: 450px) {
-  body{
-    margin-left: -60px;    
+@media screen and (max-width: 650px) and (min-width: 300px) {
+  .container {
+    width: 300px;
+    padding: 0px;
+    margin: 0 auto;
+    border-radius: 10px;
+    flex-direction: column;
+    background-color: hsl(217, 100%, 97%);
+    align-items: center;
   }
-  .container{
+  .sidebar{
+    display: none;
+  }
+  .sidebar2{
     width: 100%;
-    padding: 1rem;
-    margin: 1rem;
+    display: initial;
+    border-radius: 10px;
+  }
+  .container11{
+    display: none;
+  }
+  .container10{
+    display: flex;
+    margin-top: -130px;
+    justify-self: center;
+  }
+  .container10 *{
+    margin-right: 10px;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border: 1px solid hsl(229, 24%, 87%);
+    border-radius: 50%;
+    font-weight: 400;
   }
   .container2{
-    width: 120px;
-    padding-right: 10px;
+    width: 90%;
+    background-color: hsl(231, 100%, 99%);
+    border-radius: 10px;
+    margin-top: -20px;
+    padding-bottom: 20px;
+    top: -89px;
+    position: relative;
   }
-  .inputer {
-    width: 94%;
-    max-width: 250px;
+  .container3second{
+    width: 90%;
+    background-color: hsl(231, 100%, 99%);
+    border-radius: 10px;
+    margin-top: -20px;
+    padding-bottom: 20px;
+    top: -10px;
+    position: relative;
   }
-  .return1{
-    margin-left: 65px;
-    display: initial;
+  .toggle{
+    margin-bottom: 9px;
+  }
+  .switch{
+    width: 40px;
+  }
+  .container4second{
+    width: 90%;
+    background-color: hsl(231, 100%, 99%);
+    border-radius: 10px;
+    margin-top: -20px;
+    padding-bottom: 20px;
+    top: -10px;
+    position: relative;
+  }
+  .container5second{
+    width: 90%;
+    background-color: hsl(231, 100%, 99%);
+    border-radius: 10px;
+    margin-top: -20px;
+    padding-bottom: 20px;
+    top: -135px;
+    position: relative;
+  }
+  .iconnn{
+    padding-top: 100px;
+  }
+  .container6second{
+    width: 90%;
+    background-color: hsl(231, 100%, 99%);
+    border-radius: 10px;
+    margin-top: -20px;
+    padding-bottom: 20px;
+    top: -10px;
+    position: relative;
+  }
+  .f *{
+    margin-top: 16px;
+    margin-bottom: 33px;
+  }
+  .container22third{
+    margin-bottom: 14px;
+  }
+  .container4second *{
+    padding-left: 10px;
+  }
+  .container3second *{
+    padding-left: 10px;
+  }
+  .container6second *{
+    padding-left: 10px;
+  }
+  .container21{
+    margin-top: -5px;
+    margin-bottom: -5px;
+  }
+  .container22{
+    padding-bottom: -50px;
+    height: 150px;
+    margin-bottom: 80px;
+  }
+  .container23{
+    padding-top: 20px;
+    margin-left: 20px;
+  }
+  .container2 *{
+    padding-left: 10px;
+  }
+  .inputer{
+    width: 90%;
+    margin-bottom: -0px;
+  }
+  .bodies{
+    margin-bottom: 10px;
   }
   .return{
     display: none;
   }
-  .bodies{
-    margin-bottom: 30px;
+  .return1{
+    display: none;
   }
-  .container22{
-    height: 200px;
-  }
+
   .container22second{
     flex-direction: column;
     margin-bottom: 20px;
@@ -788,21 +896,6 @@ hr{
     padding-top: 0px;
     margin-top: -53px;
     align-items: flex-start;
-
-  }
-  .toggle{
-    height: 50px;
-    height: 50px;
-    margin-bottom: 0px;
-  }
-  .container3second{
-    width: 120px;
-    padding-right: 10px;
-    
-  }
-  .container4second{
-    width: 120px;
-    padding-right: 10px;
   }
   .bodiess{
     padding-left: 20px;
@@ -818,6 +911,7 @@ hr{
     margin-bottom: 0px;
     padding-top: 10px;
     padding-right: 5px;
+    margin-left: -20px;
   }
   .bodiess2{
     padding-left: 20px;
@@ -855,44 +949,17 @@ hr{
   }
   .bodiesss{
     width: 90%;
-  
   }
   .bodiesss2{
     width: 90%;
   }
-  .d {
-    color: hsl(213, 96%, 18%);
-    font-size: 13px;
-    font-weight: 400;
-    padding-right: 0px;
+  h1{
+    font-size: 25px;
   }
-  
-  .e {
-    margin-top: -10px;
-    color: hsl(231, 11%, 63%);
-    font-size: 7px;
+  .e{
     display: none;
   }
-  .container22third{
-    margin-bottom: 5px;
-  }
-  .containerr2{
-    margin-bottom: -48px;
-  }
-  .container5second{
-    width: 120px;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .container5second h1{
-    margin-left: -40px;
-  }
-  .iconnn{
-    margin-left: -40px;
-  }
-  .container5second p{
-    margin-left: -40px;
+  .price{
+    margin-left: -30px;
   }
 }
