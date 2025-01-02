@@ -827,7 +827,7 @@ hr{
     border-radius: 10px;
     margin-top: -20px;
     padding-bottom: 20px;
-    top: -135px;
+    top: -134.5px;
     position: relative;
   }
   .iconnn{
@@ -837,14 +837,18 @@ hr{
     width: 90%;
     background-color: hsl(231, 100%, 99%);
     border-radius: 10px;
-    margin-top: -20px;
+    margin-top: 10px;
     padding-bottom: 20px;
-    top: -10px;
+    top:-24px;
     position: relative;
+
+  }
+  .containerr{
+    height: 149px;
   }
   .f *{
-    margin-top: 16px;
-    margin-bottom: 33px;
+    margin-top: 16px; 
+    margin-bottom: -10px;
   }
   .container22third{
     margin-bottom: 14px;
